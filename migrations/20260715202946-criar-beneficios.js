@@ -16,7 +16,7 @@ module.exports = {
         primaryKey:true
       },
       funcionarioId:{
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull:false
       },
       valeAlimentacao:{
@@ -30,7 +30,15 @@ module.exports = {
       valeSaude:{
         type:DataTypes.DECIMAL(10,2),
         allowNull:false
-      }
+      },
+     createdAt:{
+        type: DataTypes.DATE,
+        allowNull:false
+    },
+    updatedAt:{
+        type: DataTypes.DATE,
+        allowNull:false
+    }
     })
   },
 

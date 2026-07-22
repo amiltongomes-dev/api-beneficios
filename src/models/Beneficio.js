@@ -1,14 +1,14 @@
 const { DataTypes } = require("sequelize")
 const sequelize = require("../../config/database")
 
-const Beneficio = sequelize.define("Beneficio", {
+const Beneficio = sequelize.define("Beneficios", {
     id:{
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
     funcionarioId:{
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false
     },
     valeAlimentacao:{
@@ -21,6 +21,14 @@ const Beneficio = sequelize.define("Beneficio", {
     },
     valeSaude:{
         type:DataTypes.DECIMAL(10,2),
+        allowNull:false
+    },
+     createdAt:{
+        type: DataTypes.DATE,
+        allowNull:false
+    },
+    updatedAt:{
+        type: DataTypes.DATE,
         allowNull:false
     }
 })
